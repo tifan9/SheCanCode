@@ -66,11 +66,7 @@
     padding: 1% 0;
     font-size: 20px;
 }
-.gallery{
-    width: 100%;
-    height: max-content;
-    margin-top: 40px;
-}
+
 .card{
     width: 24%;
     height: max-content;
@@ -126,6 +122,7 @@
 }
 .about-card .card img{
     width: 100%;
+    background-color: gray;
 }
 .about-card .card h3{
     font-weight: bold;
@@ -149,6 +146,49 @@
     background-color: antiquewhite;
 }
 /*end about  */
+/*contact page */
+
+.contact-info{
+    width: 100%;
+    height: max-content;
+    background-color: white;
+    padding: 3% 3%;
+}
+.contact-h{
+    border-bottom: .5px solid rgba(128, 128, 128, 0.427);
+    font-size: 20px;
+    padding: 1% 0;
+}
+.form-control{
+    width: 100%;
+    height: auto;
+}
+.form-control p{
+    margin-top: 10px;
+}
+.form-control input{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 0 1%;
+    border-radius: 0;
+    border: 1px solid gray;
+}
+.contact-btn{
+    width: max-content;
+    height: 35px;
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+    border: none;
+    padding: 0 2%;
+}
+.contact-btn:hover{
+    background-color: rgb(193, 185, 185);
+    color: black;
+}
+
+/*end of contact page*/
 /*Map*/
 .map{
     width: 100%;
@@ -169,4 +209,17 @@
 .footer a{
     text-decoration: none;
     color: white;
+}
+
+/*-------------------MEDIA QUERY------------------*/
+@media screen and (max-width:1024px){
+    .gallery .card{
+        width: 23.7%;
+        height: max-content;
+    }
+}
+@media screen and (max-width:768px) {
+    .gallery .card{
+        width: 48%;
+    }
 }
