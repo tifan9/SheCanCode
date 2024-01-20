@@ -1,0 +1,130 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  padding: 20px;
+  background-color: rgb(250, 250, 250);
+
+}
+
+/*Header*/
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: azure;
+  padding: 10px 20px;
+}
+
+/*Filter*/
+
+.filter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.filter .form-control{
+  width: 100%;
+}
+.filter .form-control input{
+  background-color: burlywood;
+  border: none;
+  outline: none;
+  padding: 12px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: inherit;
+  letter-spacing: 1px;
+  width: 100%;
+  margin: 0 0 30px;
+}
+
+.filter .form-control input::placeholder{
+  color: #fff;
+}
+
+.filter.form-control input:focus{
+  box-shadow: none;
+}
+.filter .region-filter{
+  width: auto;
+}
+.filter .region-filter .select{
+  background-color: antiquewhite;
+  color: #815d5d;
+  font-family: inherit;
+  padding: 12px;
+  /* width: 200px; */
+  border: none;
+  border-radius: 5px;
+}
+
+img{
+  max-width: 100%;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 20px;
+  /* box-shadow: 0 10px 10px rgba(32,45,54,0.1); */
+}
+
+.grid article img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 50%;
+}
+.grid .details h3{
+  padding-bottom: 10px;
+}
+.grid .details p{
+  padding-bottom: 5px;
+}
+.grid .details{
+  background-color: bisque;
+  padding: 20px;
+  margin-top: -10px;
+  border-radius: 0 0 5px 5px;
+  height: 160px;
+}
+
+/*Media Queries*/
+
+@media (min-width: 640px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width:768px){
+  .grid{
+    grid-template-columns: repeat(4, 1rf);
+  }
+  .filter{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .filter .form-control {
+    width: auto;
+  }
+  .filter .form-control input{
+    width: auto;
+    margin: 0;
+
+  }
+}
+@media (min-width: 992px){
+  .grid{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .header, .filter, .grid{
+    padding: 20px 100px;
+  }
+}
+
+
+
+
