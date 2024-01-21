@@ -5,7 +5,7 @@
 }
 body{
   padding: 20px;
-  background-color: rgb(250, 250, 250);
+  background-color: #2F3C7E;
 
 }
 
@@ -13,9 +13,10 @@ body{
 .header{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: azure;
+  justify-content: center;
+  background-color: #FBEAEB;
   padding: 10px 20px;
+  border-radius: 8px;
 }
 
 /*Filter*/
@@ -30,12 +31,13 @@ body{
   width: 100%;
 }
 .filter .form-control input{
-  background-color: burlywood;
+  background-color: #606ca9;
   border: none;
   outline: none;
   padding: 12px;
   border-radius: 5px;
   color: #fff;
+  font-size: 14px;
   font-family: inherit;
   letter-spacing: 1px;
   width: 100%;
@@ -53,13 +55,17 @@ body{
   width: auto;
 }
 .filter .region-filter .select{
-  background-color: antiquewhite;
-  color: #815d5d;
+  background-color: #606ca9;
+  color: #fcfdff;
   font-family: inherit;
   padding: 12px;
   /* width: 200px; */
   border: none;
-  border-radius: 5px;
+  border-radius: 7px;
+}
+.select option{
+  font-size: 14px;
+  border-radius: 3px;
 }
 
 img{

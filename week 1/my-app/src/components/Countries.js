@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-
+import {Link} from 'react-router-dom'
 
 const URL= 'https://restcountries.com/v3.1/all'
 const Countries = () => {
@@ -20,6 +20,7 @@ const Countries = () => {
     <>
       <section className="grid">
         {countries.map((country) => (
+            
           <article key={country.cca3}>
             <img src={country.flags.png} alt={country.name}/>
             <div className="details">
@@ -27,6 +28,7 @@ const Countries = () => {
             <p>Population: {country.population}</p>
             <p>Capital: {country.capital}</p>
             <p>Region: {country.region}</p>
+            <Link to ={`/countries/${country.name}`}>More</Link>
             </div>
             
           </article>
