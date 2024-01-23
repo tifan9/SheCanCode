@@ -1,19 +1,20 @@
 *{
-    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
 }
 
-html{
+body{
+    font-family: "Karma", sans-serif;
     font-size: 16px;
     scroll-behavior: smooth;
 }
 
 
 main{
-    width: 95%;
+    width: 100%;
     max-width: 1200px;
     margin: auto;
 }
@@ -23,12 +24,22 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    position: fixed;
+    width: 100%;
+    margin-right: 2px;
+    /* padding: 20px; */
+    flex-direction: row;
+    /* padding-right: 20px; */
+    background-color: white;
+
 }
 
 header .menu{
     width: 30px;
     height: 30px;
     cursor: pointer;
+    padding-left: 12px;
+    /* margin-left: 7px; */
 }
 
 header .menu img{
@@ -38,8 +49,13 @@ header .menu img{
 header h1{
     font-size: 1.5rem;
     font-weight: lighter;
+    padding-bottom: 16px;
+    
 }
-
+header .h1{
+    padding-right: 50px;
+    padding-bottom: 16px;
+}
 nav{
     position: fixed;
     left: 0;
@@ -264,13 +280,21 @@ footer .posts .active{
 }
 
 
+
+@media (width > 1040px) {
+    header .h1{
+        padding-right: 160px;
+        padding-bottom: 16px;
+    }
+}
+
 @media only screen and (max-width:600px) {
     html{
         font-size: 14px;
     }
 
     main{
-        width: 78%;
+        width: 100%;
         max-width: 1200px;
         margin: auto;
     }
