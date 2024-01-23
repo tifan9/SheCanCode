@@ -7,8 +7,8 @@ import {apiURL} from "../utils/api"
 const Countries = () => {
 
     const [countries, setCountries] = useState([])
-    const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(8);
+    // const [currentPage, setCurrentPage] = useState(1);
+    // const [itemsPerPage] = useState(8);
 
     const fetchCountry = async () => {
         try {
@@ -48,17 +48,6 @@ const Countries = () => {
         
       }
     }
-    // Pagination
-     // Calculate total pages
-  const totalPages = Math.ceil(countries.length / itemsPerPage);
-
-  // Logic to get the countries for the current page
-  const indexOfLastCountry = currentPage * itemsPerPage;
-  const indexOfFirstCountry = indexOfLastCountry - itemsPerPage;
-  const currentCountries = countries.slice(indexOfFirstCountry, indexOfLastCountry);
-
-   // Change page
-   const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <>
@@ -66,7 +55,7 @@ const Countries = () => {
           <Filter onSearch={getCountryByName} onSelect={getCountryByRegion}/>
         </div>
       <section className="grid">
-        {currentCountries.map((country) => (
+        {countries.map((country) => (
             
           <article key={country.cca3}>
             <img src={country.flags.png} alt={country.name}/>
@@ -84,7 +73,7 @@ const Countries = () => {
             
           </article>
         ))}
-        <div className='pagination-container'>
+        {/* <div className='pagination-container'>
         <Pagination>
           {Array.from({ length: totalPages }).map((_, index) => (
             <Pagination.Item
@@ -96,7 +85,7 @@ const Countries = () => {
             </Pagination.Item>
           ))}
         </Pagination>
-      </div>
+      </div> */}
       </section>
       
     </>
