@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="../src/output.css" rel="stylesheet">
+    <title>Food Blog</title>
+</head>
+
+<body class="font-karma text-balance bg-gray-100 scroll-smooth">
+
+    <main class="">
+
+        <header class="flex justify-between items-center h-20 fixed w-full bg-white">
+            <div class=" text-red-600 w-8 h-8 cursor-pointer pl-3">
+                <img class="show_hide" onclick="menu_show()" src="icons/3 bar black.png" alt="">
+            </div>
+            <h1 id="food" class="text-2xl font-light pb-4">My Food</h1>
+            <h1 class="h1 pr-16 pb-4">Mail</h1>
+            <nav class="fixed bg-white hidden" id="nav">
+                <ul class="text-3xl cursor-pointer">
+                    <li class="cursor-pointer">Close Menu</li>
+                    <li><a href="#food">Food</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="gallery w-full flex flex-col justify-between border-b border-lightgray pb-20">
+            <div class="img_gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-15">
+                <!-- Repeat this block for each card -->
+                <div class="card max-h-550 flex flex-col justify-between">
+                    <div class="image max-w-full max-h-400">
+                        <img src="img/sandwich.jpg" alt="Sandwich Image" class="w-full h-full">
+                    </div>
+                    <div class="caption w-full h-400 mt-1.5em">
+                        <h3 class="text-center font-light text-1.5rem leading-1.5rem">The Perfect Sandwich, A Real NYC Classic</h3>
+                        <p class="text-center text-0.9rem mt-1em">Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                    </div>
+                </div>
+                <div class="card max-h-550 flex flex-col justify-between">
+                    <div class="image max-w-full max-h-400">
+                        <img src="img/sandwich.jpg" alt="Sandwich Image" class="w-full h-full">
+                    </div>
+                    <div class="caption w-full h-400 mt-1.5em">
+                        <h3 class="text-center font-light text-1.5rem leading-1.5rem">The Perfect Sandwich, A Real NYC Classic</h3>
+                        <p class="text-center text-0.9rem mt-1em">Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                    </div>
+                </div>
+                <div class="card max-h-550 flex flex-col justify-between">
+                    <div class="image max-w-full max-h-400">
+                        <img src="img/sandwich.jpg" alt="Sandwich Image" class="w-full h-full">
+                    </div>
+                    <div class="caption w-full h-400 mt-1.5em">
+                        <h3 class="text-center font-light text-1.5rem leading-1.5rem">The Perfect Sandwich, A Real NYC Classic</h3>
+                        <p class="text-center text-0.9rem mt-1em">Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                    </div>
+                </div>
+                <div class="card max-h-550 flex flex-col justify-between">
+                    <div class="image max-w-full max-h-400">
+                        <img src="img/sandwich.jpg" alt="Sandwich Image" class="w-full h-full">
+                    </div>
+                    <div class="caption w-full h-400 mt-1.5em">
+                        <h3 class="text-center font-light text-1.5rem leading-1.5rem">The Perfect Sandwich, A Real NYC Classic</h3>
+                        <p class="text-center text-0.9rem mt-1em">Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                    </div>
+                </div>
+                <div class="card max-h-550 flex flex-col justify-between">
+                    <div class="image max-w-full max-h-400">
+                        <img src="img/sandwich.jpg" alt="Sandwich Image" class="w-full h-full">
+                    </div>
+                    <div class="caption w-full h-400 mt-1.5em">
+                        <h3 class="text-center font-light text-1.5rem leading-1.5rem">The Perfect Sandwich, A Real NYC Classic</h3>
+                        <p class="text-center text-0.9rem mt-1em">Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                    </div>
+                </div>
+                <div class="card max-h-550 flex flex-col justify-between">
+                    <div class="image max-w-full max-h-400">
+                        <img src="img/sandwich.jpg" alt="Sandwich Image" class="w-full h-full">
+                    </div>
+                    <div class="caption w-full h-400 mt-1.5em">
+                        <h3 class="text-center font-light text-1.5rem leading-1.5rem">The Perfect Sandwich, A Real NYC Classic</h3>
+                        <p class="text-center text-0.9rem mt-1em">Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                    </div>
+                </div>
+                <div class="card max-h-550 flex flex-col justify-between">
+                    <div class="image max-w-full max-h-400">
+                        <img src="img/sandwich.jpg" alt="Sandwich Image" class="w-full h-full">
+                    </div>
+                    <div class="caption w-full h-400 mt-1.5em">
+                        <h3 class="text-center font-light text-1.5rem leading-1.5rem">The Perfect Sandwich, A Real NYC Classic</h3>
+                        <p class="text-center text-0.9rem mt-1em">Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                    </div>
+                </div>
+                <div class="card max-h-550 flex flex-col justify-between">
+                    <div class="image max-w-full max-h-400">
+                        <img src="img/sandwich.jpg" alt="Sandwich Image" class="w-full h-full">
+                    </div>
+                    <div class="caption w-full h-400 mt-1.5em">
+                        <h3 class="text-center font-light text-1.5rem leading-1.5rem">The Perfect Sandwich, A Real NYC Classic</h3>
+                        <p class="text-center text-0.9rem mt-1em">Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                    </div>
+                </div>
+                <!-- End of card block -->
+            </div>
+
+            <div class="pagination flex justify-center items-center w-full h-100px">
+                <ul class="flex">
+                    <li class="mr-30px text-black font-light px-8 cursor-pointer">&lt;&lt;</li>
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li class="text-black font-light px-8 cursor-pointer">&gt;&gt;</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="about text-center pt-1em pb-5em border-b border-lightgray" id="about">
+            <h1 class="title mb-2em text-3xl font-light">About Me, The Food Man</h1>
+            <div class="about_banner max-w-800px max-h-800px mx-auto">
+                <img src="img/chef.jpg" alt="Chef Image" class="w-full h-full">
+            </div>
+            <h1 class="caption mt-4">I am who I Am!</h1>
+            <em class="block">With passion For Real, Good Food</em>
+            <p class="mt-4 text-1rem leading-1.2em">
+                Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem
+                ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum.
+                Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt
+                sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+            </p>
+        </section>
+
+        <footer class="flex justify-between p-8 bg-gray-800 text-white">
+            <div class="footer max-w-33%">
+                <h1 class="text-1.5rem font-light mb-1em">FOOTER</h1>
+                <p class="mb-2em">
+                    Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue
+                    gravida diam non fringilla.
+                </p>
+                <a href="#" class="mt-2 text-black"><span>Powered by uwase sophie</span></a>
+            </div>
+
+            <div class="blog_post">
+                <h1 class="text-1.5rem font-light mb-2em">BLOG POSTS</h1>
+                <!-- Repeat this block for each blog post -->
+                <div class="each_blog flex items-center">
+                    <img src="img/workshop.jpg" alt="Workshop Image" class="mr-2 w-80px h-80px">
+                    <div class="caption max-w-200px ml-20px text-left">
+                        <h3 class="text-lg font-bold">Lorem</h3>
+                        <p>Sed mattis nunc</p>
+                    </div>
+                </div>
+                <!-- End of blog post block -->
+            </div>
+
+            <div class="posts clear-both">
+                <h1 class="text-1.5rem font-light mb-1em">POPULAR TAGS</h1>
+                <div class="each_post float-left px-2em py-0.2em bg-757575 text-white m-0.5em font-0.8rem">Travel</div>
+                <div class="each_post float-left px-2em py-0.2em bg-757575 text-white m-0.5em font-0.8rem">Travel</div>
+                <div class="each_post float-left px-2em py-0.2em bg-757575 text-white m-0.5em font-0.8rem">Travel</div>
+                <div class="each_post float-left px-2em py-0.2em bg-757575 text-white m-0.5em font-0.8rem">Travel</div>
+                
+                <div class="each_post float-left px-2em py-0.2em bg-757575 text-white m-0.5em font-0.8rem">Travel</div>
+                
+                <!-- Repeat this block for each tag -->
+                <!-- End of tag block -->
+            </div>
+        </footer>
+
+    </main>
+    <script src="">
+        var nav = document.getElementById("nav");
+
+        function menu_show(){
+            nav.style.display="block";
+        }
+
+        function menu_exit(){
+            nav.style.display="none";
+        }
+
+    </script>
+</body>
+
+</html>

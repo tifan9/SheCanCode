@@ -7,4 +7,3 @@ var nav = document.getElementById("nav");
     function menu_exit(){
         nav.style.display="none";
     }
-
