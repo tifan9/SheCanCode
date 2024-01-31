@@ -17,5 +17,5 @@ function calculate(){
 }
 */
 var date = new Date();
-var currentDate = Math.pow(date.getDate(),2);
+var currentDate = Math.pow(date,2);
 console.log(currentDate)
