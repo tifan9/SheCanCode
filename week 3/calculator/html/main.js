@@ -1,4 +1,4 @@
-/*
+
 // clear function
 function clearScreen(){
     document.getElementById("result").value = ""
@@ -15,7 +15,4 @@ function calculate(){
     var q = eval(p)
     document.getElementById("result").value = q;
 }
-*/
-var date = new Date();
-var currentDate = Math.pow(date,2);
-console.log(currentDate)
+
