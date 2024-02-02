@@ -1,12 +1,3 @@
-// // Q1
-
-// const displayCurrentDay = () => console.log(`Today is: ${new Date().toLocaleDateString('en-US', {weekday: 'long'})}`);
-// displayCurrentDay();
-
-// const currentDay=() =>{
-//     console.log(`Today is: ${new Date().toLocaleDateString('en-US', { weekday: 'long' })}`)
-// }
-//
 
 // Q1
 switch(new Date().getDay()){
@@ -33,16 +24,6 @@ switch(new Date().getDay()){
     break;
 }
 console.log("Today is: "+day);
-
-
-
-
-
-
-
-
-
-
 
 //Q2
 const findLargest = (num1, num2, num3) => {
