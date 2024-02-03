@@ -46,3 +46,14 @@ const num3 = 8;
 
 const result = findLargest(num1, num2, num3);
 console.log(`The largest number is: ${result}`);
+
+
+function checkRange(num1, num2, num3) {
+    return (num1 >= 50 && num1 <= 99) ||
+           (num2 >= 50 && num2 <= 99) ||
+           (num3 >= 50 && num3 <= 99);
+}
+
+console.log(checkRange(45, 55, 65)); 
+console.log(checkRange(30, 40, 90));  
+console.log(checkRange(20, 30, 40));  
