@@ -34,11 +34,3 @@ console.log( filteredPrice)
 const productLetter = items.filter(item => item.name.charAt(0).toUpperCase() === 'B')
 console.log(productLetter)
 
-//create a task manager where user can add, remove, and mark tasks as completed
-const taskManager = {
-    
-}
-// a: add task to task list
-// b: remove task from task list
-// d: sort task alphabetical
-// E: display number of incomple tasks
