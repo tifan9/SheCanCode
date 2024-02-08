@@ -21,8 +21,8 @@
             .then(res => res.json())
             .then(d => 
             d.forEach( (element) =>{
-                newDiv.innerHTML += `id:${element.id} title:${element.title}` 
-                // console.log(element)
+                newDiv.innerHTML += `id:${element.id} title:${element.title} </br>` 
+                console.log(element)
             }))
             .catch(err => console.log(err))
         
