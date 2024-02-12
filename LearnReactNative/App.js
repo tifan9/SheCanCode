@@ -1,20 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { ActivityIndicator, Text, TouchableOpacity, View } from 'react-native';
+import { styles } from './styles';
 export default function App() {
+  const isloading = false
+  const whenUserClick = () =>{
+    isloading = true
+    console.log(isloading)
+  }
   return (
     <View style={styles.container}>
-      <Text>This is ReactNative app !</Text>
+      {isloading?(
+          <ActivityIndicator  />
+      ):(
+        <Text  >This is ReactNative app !</Text>
+      )}
+      
+      <TouchableOpacity  style={styles.buttonRequest} onPress={whenUserClick()} >
+          <Text style={{color:"white"}}>Request</Text>
+      </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
