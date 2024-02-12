@@ -2,9 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import { ActivityIndicator, Text, TouchableOpacity, View } from 'react-native';
 import { styles } from './styles';
 export default function App() {
-  const isloading = false
+  let isloading = false;
   const whenUserClick = () =>{
-    isloading = true
+    isloading = true;
     console.log(isloading)
   }
   return (
