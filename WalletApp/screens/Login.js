@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { styles } from '../styles';
 import { TextInput, Checkbox } from "react-native-paper";
 import Icon from "react-native-vector-icons/FontAwesome";
-export const Login = () => {
+export const Login = ({navigation}) => {
     
     return(
             <ScrollView style={tw `bg-[#F3F5F6]`}>
@@ -78,6 +78,9 @@ export const Login = () => {
                 height: 40,
                 marginHorizontal: 1,
                  }}
+                 onPress={() =>
+                    navigation.navigate('register')
+                  }
             >
               <Text
                 style={{

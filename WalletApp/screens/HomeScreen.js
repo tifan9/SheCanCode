@@ -28,7 +28,6 @@ export const HomeScreen = () => {
               </View>
               <Text>Price Alert</Text>
             </View>
-
             <View style={tw`flex items-center`}>
               <View
                 style={tw`rounded-full bg-[#FBFBFC] w-12 h-12 justify-center items-center`}
