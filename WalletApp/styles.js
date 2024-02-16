@@ -21,7 +21,9 @@ export const styles = StyleSheet.create({
   
     footerIcons: {
       // flex: 1,
-      alignItems: "flex-end",
+    //   alignItems: "flex-end",
+    paddingVertical:11,
+      justifyContent: "flex-end",
       flexDirection: "row",
       justifyContent: "space-around",
     //   marginTop: 20,

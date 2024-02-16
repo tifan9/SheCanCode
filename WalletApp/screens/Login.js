@@ -5,8 +5,8 @@ import { styles } from '../styles';
 import { TextInput, Checkbox } from "react-native-paper";
 import Icon from "react-native-vector-icons/FontAwesome";
 export const Login = () => {
+    
     return(
-        
             <ScrollView style={tw `bg-[#F3F5F6]`}>
                 <View style={tw `bg-[#F3F5F6]`}>
                 <Image source={require('../assets/logo.jpg')} style={tw `w-full `}  />           
@@ -14,35 +14,43 @@ export const Login = () => {
                  {/* imputs */}
                  <View style={{ display: "flex", flexDirection: "column", gap: 12, paddingHorizontal:10, }}>
             <TextInput
+            theme={{ roundness: 50}}
+            underlineColor='white'
               style={{
                 borderRadius: 40,
                 backgroundColor: "#fff",
                 borderBottomWidth: 0,
                 marginHorizontal: 10,
+                overflow:"hidden",
+                
+                
               }}
               mode="offline"
               label="Username"
               left={
                 <TextInput.Icon
-                  size={12}
+                  size={17}
                   icon={"account-outline"}
-                  style={{ backgroundColor: "#FDE7EB    " }}
+                  style={{ backgroundColor: "#F9EBE2" }}
                 ></TextInput.Icon>
               }
             />
             <TextInput
+            theme={{ roundness: 50}}
+            underlineColor='white'
               style={{
                 borderRadius: 40,
                 backgroundColor: "#fff",
                 borderBottomWidth: 0,
                 marginHorizontal: 10,
+                overflow:"hidden",
               }}
               mode="offline"
               label="Password"
               secureTextEntry
               left={
                 <TextInput.Icon
-                  size={16}
+                  size={17}
                   icon={"lock-outline"}
                   style={{ backgroundColor: "#E1EAFF" }}
                 />
@@ -66,7 +74,7 @@ export const Login = () => {
                 backgroundColor: "#1A1B32",
                 alignItems: "center",
                 justifyContent: "center",
-                width: 200,
+                width: 140,
                 height: 40,
                 marginHorizontal: 1,
                  }}

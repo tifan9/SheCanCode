@@ -8,12 +8,16 @@ export const Register = () => {
     return(
         <ScrollView style={tw `bg-[#F3F5F6]`}>
             <View style={styles.container}>
-            <Image source={require('../assets/logo2.jpg')} style={tw `w-full my-8  `}  />   
-            <Text style={tw `text-3xl font-bold text-center mb-5 pb-1`}>Register</Text>
+                <View style={tw `pt-1`}>
+                <Image source={require('../assets/logo2.jpg')} style={tw `w-full h-full`}  />   
+                </View>
+            <Text style={tw `text-2xl font-bold text-center mb-1 pb-1 mt-1`}>Register</Text>
             <View style={{
                 marginHorizontal: 10,
             }}>
             <TextInput
+            theme={{ roundness: 50}}
+            underlineColor='white'
               style={{
                 borderRadius: 40,
                 backgroundColor: "#fff",
@@ -26,13 +30,15 @@ export const Register = () => {
               label="Username"
               left={
                 <TextInput.Icon
-                  size={12}
+                  size={17}
                   icon={"account-outline"}
                   style={{ backgroundColor: "#FBEAE5" }}
                 ></TextInput.Icon>
               }
             />
             <TextInput
+            theme={{ roundness: 50}}
+            underlineColor='white'
               style={{
                 borderRadius: 40,
                 backgroundColor: "#fff",
@@ -44,13 +50,15 @@ export const Register = () => {
               label="email"
               left={
                 <TextInput.Icon
-                  size={12}
+                  size={17}
                   icon={"email-outline"}
                   style={{ backgroundColor: "#DEF4E8" }}
                 ></TextInput.Icon>
               }
             />
             <TextInput
+            theme={{ roundness: 50}}
+            underlineColor='white'
               style={{
                 borderRadius: 40,
                 backgroundColor: "#fff",
@@ -69,25 +77,7 @@ export const Register = () => {
                 />
               }
             />
-            <TextInput
-              style={{
-                borderRadius: 40,
-                backgroundColor: "#fff",
-                borderBottomWidth: 0,
-                marginBottom: 10,
-                marginHorizontal: 10,
-              }}
-              mode="offline"
-              label="Confirm Password"
-              secureTextEntry
-              left={
-                <TextInput.Icon
-                  size={16}
-                  icon={"lock-outline"}
-                  style={{ backgroundColor: "#E1EAFF" }}
-                />
-              }
-            />
+           
             </View>
                         <View style={{ height: 10 }}></View>
 
@@ -114,7 +104,7 @@ export const Register = () => {
                   paddingVertical: 15,
                   width: "auto",
                   marginVertical:9,
-                  marginHorizontal: 10,
+                  marginHorizontal: 4,
                   backgroundColor: "#1A1B32",
                   alignItems: "center",
                   color: "white",
@@ -125,7 +115,7 @@ export const Register = () => {
                 <Text style={{ color: "white", fontSize: 20 }}>Register</Text>
               </TouchableOpacity>
             </View>
-            {/* <View style={{ height: 80 }}></View> */}
+            <View style={{ height: 60 }}></View>
             <View style={styles.footerIcons}>
             <TouchableOpacity style={styles.square}>
               <Icon name="facebook-square" size={30} color="#257EFF" />
