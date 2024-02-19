@@ -12,7 +12,7 @@ import { FontAwesome } from "@expo/vector-icons";
 import { TextInput, Checkbox, MD3Colors } from "react-native-paper";
 import Icon from "react-native-vector-icons/FontAwesome";
 // import { Icon } from 'react-native-elements'
-export const HomeScreen = () => {
+export const HomeScreen = ({navigation}) => {
   return (
     <ScrollView style={{  flex: 1 }}>
       <View style={{ height: 30 }}></View>
