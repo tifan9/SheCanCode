@@ -20,34 +20,34 @@ const Filters = () => {
   return (
     <View
       style={[
-        tw `flex flex-row items-center gap-2 px-5 py-5`,
-        {justifyContent: 'space-between'}
+        tw `flex flex-row items-center gap-2 px-5 py-5 text-black`,
+        {justifyContent: 'space-between', color: 'black'}
       ]}
     >
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
   <View style={[
     tw `rounded-2xl h-10 w-24 border-2 justify-center items-center`,
-    { backgroundColor: 'aliceblue', borderColor: 'lightgray', marginRight: 10 }
+    { backgroundColor: 'aliceblue', borderColor: 'lightgray', marginRight: 10 , color: 'black' }
   ]}>
-    <Button>All</Button>
+    <Button style={{color:'black'}}>All</Button>
   </View>
   <View style={[
-    tw `rounded-2xl h-10 w-25 border-2  justify-center items-center`,
-    { backgroundColor: 'aliceblue', borderColor: 'lightgray', marginRight: 10 }
+    tw `rounded-2xl h-10 w-25 border-2  justify-center items-center text-black`,
+    { backgroundColor: 'aliceblue', borderColor: 'lightgray', marginRight: 10 , color: 'black'}
   ]}>
-    <Button>Woman</Button>
+    <Button style={{color:'black'}}>Woman</Button>
   </View>
   <View style={[
-    tw `rounded-2xl h-10 w-24 border-2 px-5 justify-center items-center`,
-    { backgroundColor: 'aliceblue', borderColor: 'lightgray', marginRight: 10 }
+    tw `rounded-2xl h-10 w-24 border-2 px-5 justify-center items-center text-black`,
+    { backgroundColor: 'aliceblue', borderColor: 'lightgray', marginRight: 10 , color: 'black'}
   ]}>
-    <Button>Men</Button>
+    <Button style={{color:'black'}}>Men</Button>
   </View>
   <View style={[
-    tw `rounded-2xl h-10 w-24 border-2 px-5 justify-center items-center`,
-    { backgroundColor: 'aliceblue', borderColor: 'lightgray', marginRight: 10 }
+    tw `rounded-2xl h-10 w-24 border-2 px-5 justify-center items-center text-black`,
+    { backgroundColor: 'aliceblue', borderColor: 'lightgray', marginRight: 10 , color: 'black'}
   ]}>
-    <Button>Dress</Button>
+    <Button style={{color:'black'}}>Dress</Button>
   </View>
 </ScrollView>
 
