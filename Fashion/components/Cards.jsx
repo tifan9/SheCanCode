@@ -12,7 +12,7 @@ function Card({ type, image, title, tag, price }) {
             <Text style={[tw`text-lg font-bold text-white`, styles.text]}>{tag}</Text>
           </View>
           <View style={styles.bottomContainer}>
-            <Text style={[tw`text-sm text-gray-500 text-white`, styles.text]}>{title}</Text>
+            <Text style={[tw `text-sm text-gray-500 text-white`, styles.text]}>{title}</Text>
             <Text style={[tw`text-sm text-white`, styles.text]}>{price}</Text>
           </View>
         </View>
