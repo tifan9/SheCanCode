@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import tw from 'twrnc';
 
-const Sign = () => {
+const Sign = ({navigation}) => {
   return (
     <>
       <View
@@ -57,7 +57,9 @@ const Sign = () => {
           </TouchableOpacity>
           <TouchableOpacity
             style={[tw `items-center justify-center  rounded-lg py-3`, { width: '100%' }]}
-            onPress={() => console.log('Button Pressed')}
+            onPress={() =>
+              navigation.navigate('register')
+            }
           >
             <Text style={tw`text-white text-xl`}>Sign In</Text>
           </TouchableOpacity>

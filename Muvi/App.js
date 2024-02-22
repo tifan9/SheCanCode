@@ -5,6 +5,9 @@ import { Welcome } from './screen/Welcome';
 import { Sign } from './screen/Sign';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { Login } from './screen/Login';
+import { Register } from './screen/Register';
+import { Home } from './screen/Home';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -16,9 +19,13 @@ export default function App() {
       {/* <Sign  /> */}
       <NavigationContainer>
         <Stack.Navigator initialRouteName='splash'>
-          <Stack.Screen  name='splash' component={Splash} options={{ headerShown: false }} />
-          <Stack.Screen name = 'welcome' component={Welcome} options={{ headerShown: false }} />
-          <Stack.Screen name = 'sign' component = {Sign} options={{ headerShown: false }}/>
+          {/* <Stack.Screen  name='splash' component={Splash} options={{ headerShown: false }} /> */}
+          {/* <Stack.Screen name = 'welcome' component={Welcome} options={{ headerShown: false }} /> */}
+          {/* <Stack.Screen name = 'sign' component = {Sign} options={{ headerShown: false }}/>  */}
+          {/* <Stack.Screen name = 'register' component = {Register} options={{ headerShown: false }}/> */}
+          {/* <Stack.Screen name = 'login' component = {Login} options={{ headerShown: false }}/> */}
+          <Stack.Screen name = 'home' component = {Home} options={{ headerShown: false }}/>
+
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="light"/>

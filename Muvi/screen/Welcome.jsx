@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, ScrollView, ImageBackground, StyleSheet, SafeAreaView,Image, TouchableOpacity } from 'react-native';
+import {Dimensions, View, Text, ScrollView, ImageBackground, StyleSheet, SafeAreaView,Image, TouchableOpacity } from 'react-native';
 import tw from 'twrnc';
 
 export const Welcome = ({navigation}) => {
