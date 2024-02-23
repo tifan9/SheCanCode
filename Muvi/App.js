@@ -19,11 +19,11 @@ export default function App() {
       {/* <Sign  /> */}
       <NavigationContainer>
         <Stack.Navigator initialRouteName='splash'>
-          {/* <Stack.Screen  name='splash' component={Splash} options={{ headerShown: false }} /> */}
-          {/* <Stack.Screen name = 'welcome' component={Welcome} options={{ headerShown: false }} /> */}
-          {/* <Stack.Screen name = 'sign' component = {Sign} options={{ headerShown: false }}/>  */}
-          {/* <Stack.Screen name = 'register' component = {Register} options={{ headerShown: false }}/> */}
-          {/* <Stack.Screen name = 'login' component = {Login} options={{ headerShown: false }}/> */}
+          <Stack.Screen  name='splash' component={Splash} options={{ headerShown: false }} />
+          <Stack.Screen name = 'welcome' component={Welcome} options={{ headerShown: false }} />
+          <Stack.Screen name = 'sign' component = {Sign} options={{ headerShown: false }}/> 
+          <Stack.Screen name = 'register' component = {Register} options={{ headerShown: false }}/>
+          <Stack.Screen name = 'login' component = {Login} options={{ headerShown: false }}/>
           <Stack.Screen name = 'home' component = {Home} options={{ headerShown: false }}/>
 
         </Stack.Navigator>

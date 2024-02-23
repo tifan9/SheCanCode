@@ -1,6 +1,6 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar';
-import {Dimensions, View, Text, ScrollView, ImageBackground, StyleSheet, SafeAreaView,Image, TouchableOpacity } from 'react-native';
+import {Dimensions, View, Text, ScrollView, ImageBackground, StyleSheet, SafeAreaView,Image, TouchableOpacity, Pressable } from 'react-native';
 import tw from 'twrnc';
 import { FontAwesome } from "@expo/vector-icons";
   import { TextInput, Checkbox, MD3Colors } from "react-native-paper";
@@ -24,7 +24,9 @@ const Register = ({navigation}) => {
                     
                 }]}>
                 <View style={[tw `rounded-2xl h-10 w-10 justify-center items-center`, {}]}>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                        onPress={() =>navigation.navigate('sign')}
+                        >
                         <MaterialCommunityIcons
                             theme={{ roundness: 50}}
                             name='arrow-left' 
@@ -122,9 +124,11 @@ const Register = ({navigation}) => {
                             />
                         <Text style={tw `text-black text-xl`}>Sign Up with Apple</Text>
                     </TouchableOpacity>
-                    <Text style={tw `text-white text-md pt-5`}> Already have an account? <Text style={[tw `text-yellow-500`]} onPress={() =>
-                            navigation.navigate('login')
-                          }>Sign in</Text></Text>
+                    <Pressable
+                        onPress={() =>navigation.navigate('login')}
+                    >
+                        <Text style={tw `text-white text-md pt-5`}> Already have an account? <Text style={[tw `text-yellow-500`]} >Sign in</Text></Text>
+                    </Pressable>
                 </View>
                 </View>
         <StatusBar style="light"/>
