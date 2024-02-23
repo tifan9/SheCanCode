@@ -6,8 +6,8 @@ import { FontAwesome } from "@expo/vector-icons";
   import { Input } from 'react-native-elements';
   import Icon from "react-native-vector-icons/FontAwesome";
   import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-const Cards = () => {
-    const card = [
+const CardMovie = () => {
+    const movieCard = [
         {
             id:1,
             image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQavLV22TAFK3VjssetbvykZj_g3Irf4t9yd-HO3Lai502iFqXwzy9jr5bZbP0kX5pGAgc',
@@ -35,16 +35,18 @@ const Cards = () => {
         },
 
     ]
-    const renderCards = ({item}) => {
+    const renderMovieCards = ({item}) => {
         return (
-            <View style={[tw `flex flex-row justify-between gap-4`, {}]}>
-            <TouchableOpacity style={[tw `relative  border-white rounded-xl gap-3 mx-3 `, { width: 240, }]}>
+            <View style={[tw `flex flex-col justify-between items-center `, {}]}>
+            <TouchableOpacity style={[tw `relative  border-white rounded-xl gap-3   py-3`, { 
+                width: 380, 
+                }]}>
             <Image
                 source={{ uri: item.image }}
-                style={[tw `w-full h-40 rounded-xl`, { resizeMode: 'cover' }]}
+                style={[tw `w-full h-48 rounded-xl `, { resizeMode: 'cover' }]}
             />
-            <View style={[tw `absolute top-2 right-2 bg-yellow-500 rounded p-2`, {}]}> 
-                <Text style={[tw`text-black font-bold text-xl`]}>{item.rating}</Text>
+            <View style={[tw `w-12 bg-yellow-500 rounded p-2`, {position:'absolute',top:20, right:13}]}> 
+                <Text style={[tw `text-black font-bold text-xl`]}>{item.rating}</Text>
             </View>
         </TouchableOpacity>
         </View>
@@ -52,11 +54,11 @@ const Cards = () => {
     }
   return (
     <>
-        <FlatList
-        showsHorizontalScrollIndicator={false}
-            horizontal={true}
-            data={card}
-            renderItem={renderCards}
+    <FlatList
+        showsVerticalScrollIndicator={false}
+            vertical={true}
+            data={movieCard}
+            renderItem={renderMovieCards}
             keyExtractor={(item) => item.id.toString()}
             contentContainerStyle={{ paddingHorizontal: 15}}
         />
@@ -64,4 +66,4 @@ const Cards = () => {
   )
 }
 
-export  {Cards}
+export  {CardMovie}

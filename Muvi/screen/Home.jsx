@@ -10,6 +10,7 @@ import { FontAwesome } from "@expo/vector-icons";
   // import Feather from "react-native-vector-icons/Feather"
   import { Tags } from '../components/Tags';
 import { Cards } from '../components/Cards';
+import { CardMovie } from '../components/CardMovie';
 const windowWidth = Dimensions.get('screen').width;
 const windowHeight = Dimensions.get('screen').height;
 const Home = ({navigation}) => {
@@ -42,6 +43,20 @@ const Home = ({navigation}) => {
   }
   return (
     <>
+    <View
+      style={[  
+        tw `-mx-1`,
+        {
+          borderRadius: 10, 
+          borderBottomLeftRadius: 0, 
+          borderBottomRightRadius: 0,
+          borderTopRightRadius:2,
+          marginBottom:-6,
+        },
+      ]}
+    >
+
+    </View>
     <View
         style={[  
             tw ``,
@@ -111,9 +126,12 @@ const Home = ({navigation}) => {
             ItemSeparatorComponent={() => <View style={{ width: 44 }} />}
           />
         </View>
-          <ScrollView>
+          <ScrollView showsVerticalScrollIndicator={false}>
             {/* tags    */}
-          <Tags  />
+            <View style={[tw `px-3`, {}]}>
+            <Tags  />
+            </View>
+          
           {/* cards */}
           <View style={[tw `px-3`]}>
             <View style={[tw `flex flex-row justify-between  items-center  pt-10 pb-4`]}>
@@ -134,18 +152,26 @@ const Home = ({navigation}) => {
             </View>
             <Cards  />
           </View>
-          <View style={[tw `px-3`]}>
+          <View style={[tw `px-4`]}>
             <View style={[tw `flex flex-row justify-between  items-center  pt-10 pb-4`]}>
                 <Text style={[tw `text-white text-2xl font-bold `]}>Popular on <Text style={[tw `text-yellow-500`]}>Muvi</Text></Text>
                 <TouchableOpacity>
                   <Text style={[tw `text-white`]}>View More</Text>
                 </TouchableOpacity>
             </View>
-            <Cards  />
+            <CardMovie  />
+            
           </View>
           {/* navbar */}
           </ScrollView>
-          <View style={[tw `bg-[#1F2123] flex flex-row justify-between items-center px-5 py-6`, {}]}>
+          <View style={[tw `-mx-3 -my-1`]}>
+          <View style={[tw `bg-[#1F2123] flex flex-row flex-wrap justify-between items-center px-7 py-7 w-7/7`, {
+            borderRadius: 10, 
+            borderBottomLeftRadius: 0, 
+            borderBottomRightRadius: 0,
+            overflow: 'hidden'
+            
+          }]}>
             <TouchableOpacity>
             <MaterialCommunityIcons
                 theme={{ roundness: 50 }}
@@ -182,6 +208,7 @@ const Home = ({navigation}) => {
                 accessibilityLabel=""
               />
             </TouchableOpacity>
+          </View>
           </View>
     </View>
     <StatusBar style="light"/>

@@ -23,11 +23,14 @@ const Tags = () => {
     ]
     const renderTags = ({item}) => {
         return (
-          <View style={[tw `flex flex-row justify-between gap-4 pt-4`, {}]}>
-          <TouchableOpacity style={[tw `p-1 border border-gray-400 rounded`, {}]}>
-            <Text style={[tw `text-white text-xl`]}>{item.name}</Text>
-          </TouchableOpacity>
-        </View>
+          
+              <View style={[tw `flex flex-row justify-between gap-4 pt-4`, {}]}>
+            <TouchableOpacity style={[tw `p-1 border border-gray-400 rounded`, {}]}>
+              <Text style={[tw `text-white text-xl`]}>{item.name}</Text>
+            </TouchableOpacity>
+          </View>
+          
+          
         )
     }
   return (
