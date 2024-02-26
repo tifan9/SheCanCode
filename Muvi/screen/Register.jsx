@@ -7,6 +7,7 @@ import { FontAwesome } from "@expo/vector-icons";
   import { Input } from 'react-native-elements';
   import Icon from "react-native-vector-icons/FontAwesome";
   import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { BottomNav } from '../components/BottomNav';
 const windowWidth = Dimensions.get('screen').width;
 const windowHeight = Dimensions.get('screen').height;
 const Register = ({navigation}) => {
@@ -131,6 +132,7 @@ const Register = ({navigation}) => {
                     </Pressable>
                 </View>
                 </View>
+                
         <StatusBar style="light"/>
       </View>
       

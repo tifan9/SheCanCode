@@ -181,7 +181,12 @@ const Home = ({navigation}) => {
                 accessibilityLabel=""
               />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity
+            
+            onPress={() =>
+              navigation.navigate('search')
+            }
+            >
             <Icon
                 theme={{ roundness: 50 }}
                 name="search"
@@ -202,7 +207,7 @@ const Home = ({navigation}) => {
             <TouchableOpacity>
             <MaterialCommunityIcons
                 theme={{ roundness: 50 }}
-                name="menu"
+                name="grid"
                 color={"#c3c3c3c3"}
                 size={25}
                 accessibilityLabel=""

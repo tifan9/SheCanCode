@@ -150,7 +150,7 @@ const Login = ({ navigation }) => {
           />
           {passwordError ? <Text style={[tw `text-red-500 mt-5 text-xl`]}>{passwordError}</Text> : null}
           <Text style={[tw `py-2 text-yellow-500 text-right`]}>Forgot Password?</Text>
-          <View style={[tw`items-center pt-10`, {}]}>
+          <View style={[tw `items-center pt-10`, {}]}>
             <TouchableOpacity
               style={[
                 tw`items-center justify-center bg-yellow-500 rounded-lg w-6/6 py-3`,
