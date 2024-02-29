@@ -61,7 +61,7 @@ const BottomNav = ({navigation}) => {
             >
             <MaterialCommunityIcons
                 theme={{ roundness: 50 }}
-                name="grid"
+                name="view-grid-outline"
                 color={"#c3c3c3c3"}
                 size={25}
                 accessibilityLabel=""

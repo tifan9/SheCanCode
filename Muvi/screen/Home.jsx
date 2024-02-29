@@ -160,11 +160,11 @@ const Home = ({navigation}) => {
                 </TouchableOpacity>
             </View>
             <CardMovie  />
-            
+            <Cards  />
           </View>
           {/* navbar */}
           </ScrollView>
-          <View style={[tw `-mx-3 -my-1`]}>
+          {/* <View style={[tw `-mx-3 -my-1`]}>
           <View style={[tw `bg-[#1F2123] flex flex-row flex-wrap justify-between items-center px-7 py-7 w-7/7`, {
             borderRadius: 10, 
             borderBottomLeftRadius: 0, 
@@ -214,7 +214,7 @@ const Home = ({navigation}) => {
               />
             </TouchableOpacity>
           </View>
-          </View>
+          </View> */}
     </View>
     <StatusBar style="light"/>
     </>
