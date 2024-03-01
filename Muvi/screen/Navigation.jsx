@@ -6,6 +6,7 @@ import { Search } from './Search';
 import Feather from 'react-native-vector-icons/Feather'
 import { Downloads } from './Downloads';
 import Profile from './Profile';
+import Action from './Action';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 export const MainNavigation = ()=> {
@@ -17,14 +18,11 @@ export const MainNavigation = ()=> {
           <Stack.Screen name = 'sign' component = {Sign} options={{ headerShown: false }}/> 
           <Stack.Screen name = 'register' component = {Register} options={{ headerShown: false }}/>
           <Stack.Screen name = 'login' component = {Login} options={{ headerShown: false }}/> */}
-          {/* <Stack.Screen name = 'home' component = {Home} options={{ headerShown: false }}/> */}
-          {/* <Stack.Screen name = 'search' component = {Search} options={{ headerShown: false }}/> */}
-          {/* <Stack.Screen name = 'profile' component = {Profile} options={{ headerShown: false }}/> */}
-          {/* <Stack.Screen name = 'downloads' component = {Downloads} options={{ headerShown: false }}/> */}
           
+          <Stack.Screen name = 'action' component = {Action} options={{ headerShown: false }}/>
       <Stack.Screen name='Home' component={BottomNavigation} options={{ headerShown: false }}/>
       <Stack.Screen name='Profile' component={BottomNavigation} options={{ headerShown: false }}/>
-      <Stack.Screen name='Search' component={BottomNavigation} options={{ headerShown: false }}/>
+      <Stack.Screen name='search' component={BottomNavigation} options={{ headerShown: false }}/>
       <Stack.Screen name='Downloads' component={BottomNavigation} options={{ headerShown: false }}/>
     </Stack.Navigator>
   );
