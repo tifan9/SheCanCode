@@ -1,38 +1,21 @@
 import React from 'react';
-import { 
-  Dimensions,
-  View,
-  Text,
-  ScrollView,
-  ImageBackground,
-  StyleSheet,
-  SafeAreaView,
-  Image,
-  TouchableOpacity,
-  Pressable,
-  FlatList, } from 'react-native';
-  import tw from "twrnc";
-  import { FontAwesome } from "@expo/vector-icons";
-import { TextInput, Checkbox, MD3Colors, Card } from "react-native-paper";
-import { Input } from "react-native-elements";
-import Icon from "react-native-vector-icons/FontAwesome";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, FlatList, StyleSheet, Image, Text, ImageBackground, Dimensions, Button, TouchableOpacity, ScrollView } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { TextInputComp } from '../components/Textcomponents';
+import { TextInput } from 'react-native-paper';
 import Feather from 'react-native-vector-icons/Feather'
-
-const windowWidth = Dimensions.get("screen").width;
-const windowHeight = Dimensions.get("screen").height;
-const Profile = ({ navigation }) => {
-  return (
-    <>
-      <View style={styles.Container}>
+const height = Dimensions.get('screen').height;
+export const Profile = ({navigation}) => {
+    return(
+        <View style={styles.Container}>
           <View tyle={styles.viewbar}>
           <Text style={{color:'white', fontSize:30,marginTop:40,marginHorizontal:10}}>More</Text>
           </View>
        <View style={styles.viewbar2}>
-        <Image source={require('../assets/img/downloads.jpg')} style={{width:100,height:100}}/>
+        <Image source={require('../assets/joker.jpg')} style={{width:100,height:100}}/>
         <View style={styles.viewbartext}>
-        <Text style={{color:'white', marginTop:20, fontSize:20}}>Tifan I0I</Text>
-          <Text style={{color:'#BFBBBB'}}>I0I@gmail.com</Text>
+        <Text style={{color:'white', marginTop:20, fontSize:20}}>Kesselle Gahimbare</Text>
+          <Text style={{color:'#BFBBBB'}}>kessellegahimbare@gmail.com</Text>
         </View>
         <View style={styles.viewbaricon}>
           <Feather name='edit-2' style={{color:'orange', marginTop:40}}/>
@@ -89,48 +72,44 @@ const Profile = ({ navigation }) => {
 </TouchableOpacity>
        </View>
     </View>
-
-    </>
-  );
-}
-
-export default Profile
+    )
+};
 const styles = StyleSheet.create({
-  Container:{
-    backgroundColor:'#1F2123',
-    height:windowHeight,
-  },
-  viewbar:{
-   paddingTop:50,
-   marginTop:9,
-   flexDirection:'column',
-   display:'flex',
-   backgroundColor:'black',
-   gap:16
-  },
-  viewbar2:{
-   paddingTop:20,
-   flexDirection:'row',
-   display:'flex',
-   marginHorizontal:10,
-   gap:16
-  },
-  viewbartext:{
-   flexDirection:'column',
-   display:'flex',
-  },
-  viewbaricon:{
-   flexDirection:'row',
-   display:'flex',
-  },
-  paragraph:{
-    marginTop:40,
-    marginHorizontal:40,
-  },
-  paragraphtext:{
-   flexDirection:'row',
-   display:'flex',
-   paddingBottom:20,
-   gap:20
-  }
- });
+ Container:{
+   backgroundColor:'#1F2123',
+   height:height,
+ },
+ viewbar:{
+  paddingTop:50,
+  marginTop:9,
+  flexDirection:'column',
+  display:'flex',
+  backgroundColor:'black',
+  gap:16
+ },
+ viewbar2:{
+  paddingTop:20,
+  flexDirection:'row',
+  display:'flex',
+  marginHorizontal:10,
+  gap:16
+ },
+ viewbartext:{
+  flexDirection:'column',
+  display:'flex',
+ },
+ viewbaricon:{
+  flexDirection:'row',
+  display:'flex',
+ },
+ paragraph:{
+   marginTop:40,
+   marginHorizontal:40,
+ },
+ paragraphtext:{
+  flexDirection:'row',
+  display:'flex',
+  paddingBottom:20,
+  gap:20
+ }
+});

@@ -18,6 +18,7 @@ import { Input } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { TextInputComp } from "../components/TextInputComp";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const windowWidth = Dimensions.get("screen").width;
 const windowHeight = Dimensions.get("screen").height;
@@ -54,12 +55,21 @@ const Login = ({ navigation }) => {
       return valid
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
       if (validateForm()) {
           // Perform form submission
-          navigation.navigate("home");
-          console.log('Form submitted:', email, password)
+          // navigation.navigate("Home");
+          // console.log('Form submitted:', email, password)
+          try {
+            await AsyncStorage.setItem('userData', JSON.stringify({ email, password }));
+            // Navigate to the Home screen
+            navigation.navigate("Home");
+            console.log('Form submitted:', email, password);
+        } catch (error) {
+            console.error('Error storing data:', error);
+        }
       }
+
   }
 
   const isValidEmail = (email) => {

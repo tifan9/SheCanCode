@@ -3,6 +3,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Home } from './Home';
 import { Search } from './Search';
+import { Splash } from './Splash';
+import { Welcome } from './Welcome';
+import { Sign } from './Sign';
+import { Login } from './Login';
+import { Register } from './Register';
 import Feather from 'react-native-vector-icons/Feather'
 import { Downloads } from './Downloads';
 import Profile from './Profile';
@@ -17,13 +22,14 @@ export const MainNavigation = ()=> {
           <Stack.Screen name = 'welcome' component={Welcome} options={{ headerShown: false }} />
           <Stack.Screen name = 'sign' component = {Sign} options={{ headerShown: false }}/> 
           <Stack.Screen name = 'register' component = {Register} options={{ headerShown: false }}/>
-          <Stack.Screen name = 'login' component = {Login} options={{ headerShown: false }}/> */}
-          
-          <Stack.Screen name = 'action' component = {Action} options={{ headerShown: false }}/>
-      <Stack.Screen name='Home' component={BottomNavigation} options={{ headerShown: false }}/>
+          */}
+          <Stack.Screen name = 'login' component = {Login} options={{ headerShown: false }}/>
+           
+          {/* <Stack.Screen name = 'action' component = {Action} options={{ headerShown: false }}/> */}
+      {/* <Stack.Screen name='Home' component={BottomNavigation} options={{ headerShown: false }}/>
       <Stack.Screen name='Profile' component={BottomNavigation} options={{ headerShown: false }}/>
       <Stack.Screen name='search' component={BottomNavigation} options={{ headerShown: false }}/>
-      <Stack.Screen name='Downloads' component={BottomNavigation} options={{ headerShown: false }}/>
+      <Stack.Screen name='Downloads' component={BottomNavigation} options={{ headerShown: false }}/> */}
     </Stack.Navigator>
   );
 }
