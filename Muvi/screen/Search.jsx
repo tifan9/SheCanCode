@@ -112,7 +112,7 @@ const Search = ({ navigation }) => {
                         tw`relative border-white rounded-xl gap-3 mx-3`,
                         { width: 240 },
                       ]}
-                      onPress={() =>navigation.navigate('action',item)}
+                      onPress={() =>navigation.navigate('action',{ movieId: item.id, title: item.title, overview: item.overview })}
                     >
                       <Image
                         source={{

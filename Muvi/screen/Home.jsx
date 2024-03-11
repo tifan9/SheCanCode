@@ -7,12 +7,16 @@ import { FontAwesome } from "@expo/vector-icons";
   import { Input } from 'react-native-elements';
   import Icon from "react-native-vector-icons/FontAwesome";
   import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+  
   // import Feather from "react-native-vector-icons/Feather"
   import { Tags } from '../components/Tags';
 import { Cards } from '../components/Cards';
 import { CardMovie } from '../components/CardMovie';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 const windowWidth = Dimensions.get('screen').width;
 const windowHeight = Dimensions.get('screen').height;
+
+
 const Home = ({navigation}) => {
   const category = [
     {
@@ -41,6 +45,7 @@ const Home = ({navigation}) => {
       </View>
       )
   }
+
   return (
     <>
     <View
@@ -85,6 +90,7 @@ const Home = ({navigation}) => {
           resizeMode="cover"
           style={tw `justify-center `}
         />
+        {/* Top Icons */}
             <View style={[tw `flex flex-row gap-3 px-5`]}>
                 <TouchableOpacity>
                 <MaterialCommunityIcons
@@ -101,7 +107,7 @@ const Home = ({navigation}) => {
                 name="bell-outline"
                 color={"#FFFF"}
                 size={25}
-                accessibilityLabel=""
+                accessibilityLabel="Notification Icon"
             />
             </TouchableOpacity>
             </View>
@@ -116,7 +122,6 @@ const Home = ({navigation}) => {
             },
           ]}
         >
-
           <FlatList  
             showsHorizontalScrollIndicator={false}
             horizontal={true}

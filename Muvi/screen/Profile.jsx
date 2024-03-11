@@ -18,15 +18,22 @@ import { Input } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Feather from 'react-native-vector-icons/Feather'
+import { FIREBASE_AUTH } from '../firebaseConfig';
 
 const windowWidth = Dimensions.get("screen").width;
 const windowHeight = Dimensions.get("screen").height;
 const Profile = ({ navigation }) => {
+  const auth = FIREBASE_AUTH
+  const logout = async() => {
+    auth.signOut()
+    navigation.navigate("login")
+  }
   return (
     <>
       <View style={styles.Container}>
           <View tyle={styles.viewbar}>
-          <Text style={{color:'white', fontSize:30,marginTop:40,marginHorizontal:10}}>More</Text>
+            <View style={{height:30}}></View>
+          <Text style={{color:'white', padding:5, fontSize:30,marginTop:40,marginHorizontal:10}}>More</Text>
           </View>
        <View style={styles.viewbar2}>
         <Image source={require('../assets/img/downloads.jpg')} style={{width:100,height:100}}/>
@@ -82,9 +89,9 @@ const Profile = ({ navigation }) => {
             </View>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={logout}>
   <View style={{ backgroundColor: '#141313', height: 46, marginTop: 80, borderWidth:1, borderColor:'#737272', borderRadius:10}}>
-    <Text style={{ color: '#8C0B0B', marginHorizontal: 130, paddingTop: 10, fontSize: 14 }}>Log Out</Text>
+    <Text style={{ color: '#B16D62', marginHorizontal: 130, paddingTop: 10, fontSize: 14 }}>Log Out</Text>
   </View>
 </TouchableOpacity>
        </View>
@@ -99,6 +106,7 @@ const styles = StyleSheet.create({
   Container:{
     backgroundColor:'#1F2123',
     height:windowHeight,
+    padding:5,
   },
   viewbar:{
    paddingTop:50,
@@ -110,6 +118,7 @@ const styles = StyleSheet.create({
   },
   viewbar2:{
    paddingTop:20,
+   padding:5,
    flexDirection:'row',
    display:'flex',
    marginHorizontal:10,
@@ -122,6 +131,7 @@ const styles = StyleSheet.create({
   viewbaricon:{
    flexDirection:'row',
    display:'flex',
+   paddingRight: 1,
   },
   paragraph:{
     marginTop:40,

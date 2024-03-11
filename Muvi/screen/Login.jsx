@@ -19,6 +19,9 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { TextInputComp } from "../components/TextInputComp";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { FIREBASE_AUTH } from '../firebaseConfig';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import FlashMessage, {showMessage}from "react-native-flash-message";
 
 const windowWidth = Dimensions.get("screen").width;
 const windowHeight = Dimensions.get("screen").height;
@@ -27,6 +30,13 @@ const Login = ({ navigation }) => {
     const [password, setPassword] = useState('')
     const [emailError, setEmailError] = useState('')
     const [passwordError, setPasswordError] = useState('')
+    const [loading, setLoading] = useState(true)
+    const [showPassword, setShowPassword] = useState(false)
+    const auth = FIREBASE_AUTH
+
+    const togglePasswordVisibility = () => {
+      setShowPassword(!showPassword);
+    };
     const validateForm = () => {
       let valid = true
 
@@ -35,7 +45,7 @@ const Login = ({ navigation }) => {
           setEmailError('Email must not be empty')
           valid = false
       } else if (!isValidEmail(email)) {
-          setEmailError('Invalid email format')
+          setEmailError('You have to use: example@mail.com')
           valid = false
       } else {
           setEmailError('')
@@ -57,19 +67,30 @@ const Login = ({ navigation }) => {
 
   const handleSubmit = async () => {
       if (validateForm()) {
-          // Perform form submission
-          // navigation.navigate("Home");
-          // console.log('Form submitted:', email, password)
           try {
-            await AsyncStorage.setItem('userData', JSON.stringify({ email, password }));
-            // Navigate to the Home screen
-            navigation.navigate("Home");
-            console.log('Form submitted:', email, password);
+            // await AsyncStorage.setItem('userData', JSON.stringify({ email, password }));
+            // navigation.navigate("Home");
+            // console.log('Storage Created:', email, password);
+          const response = await signInWithEmailAndPassword(auth, email, password)
+          console.log(response)
+          showMessage({
+            message:"you signed up",
+            hidestatusBar:true,
+            type:"success",
+            duration:3000,
+            icon:"danger"
+          })
+          navigation.navigate("Home");
         } catch (error) {
             console.error('Error storing data:', error);
+            showMessage({
+              message:"there is an error",
+              hidestatusBar:true,
+              type:"danger",
+              duration:3000,
+            })
         }
       }
-
   }
 
   const isValidEmail = (email) => {
@@ -92,6 +113,7 @@ const Login = ({ navigation }) => {
           },
         ]}
       >
+        <FlashMessage position="top" /> 
         {/* header */}
         <View style={[tw `py-10 flex flex-row w-[90%] items-center`, {}]}>
           <View
@@ -149,14 +171,14 @@ const Login = ({ navigation }) => {
                 style={[tw``, { backgroundColor: "#26282C",fontSize: 16, color: 'white' }]}
                 label="Password"
                 theme={{color:{primary:'white'}}}
+                secureTextEntry={!showPassword}
                 textColor='white'
                 underlineColor="gray"
-                secureTextEntry={true}
                 activeOutlineColor='white'
                 value={password}
                 onChangeText={setPassword}
                 error={!!passwordError}
-            right={<TextInput.Icon icon="lock-outline" color={"#FDD130"} />}
+            right={<TextInput.Icon icon="lock-outline" color={"#FDD130"} name={showPassword ? "eye-off" :'eye'} onPress={togglePasswordVisibility} />}
           />
           {passwordError ? <Text style={[tw `text-red-500 mt-5 text-xl`]}>{passwordError}</Text> : null}
           <Text style={[tw `py-2 text-yellow-500 text-right`]}>Forgot Password?</Text>

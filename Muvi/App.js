@@ -23,6 +23,7 @@ export default function App() {
       <NavigationContainer>
         <MainNavigation  />
       </NavigationContainer>
+      
       <StatusBar style="light"/>
     </>
   );
